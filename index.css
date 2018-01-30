@@ -1,0 +1,65 @@
+body {
+  background: black;
+}
+h1 {
+  color: azure;
+  margin-top: 60px;
+  font-size: 46px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.pelota {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  animation: vueltas 10s infinite linear;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: calc(50vh - 150px);
+  left: calc(50vw - 150px);
+}
+.pelota__caras {
+  border: 1px solid red;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  position: absolute;
+}
+.pelota__caras:nth-child(1) {
+  transform: rotateY(40deg);
+}
+.pelota__caras:nth-child(2) {
+  transform: rotateY(80deg);
+}
+.pelota__caras:nth-child(3) {
+  transform: rotateY(120deg);
+}
+.pelota__caras:nth-child(4) {
+  transform: rotateY(160deg);
+}
+.pelota__caras:nth-child(5) {
+  transform: rotateY(200deg);
+}
+.pelota__caras:nth-child(6) {
+  transform: rotateY(240deg);
+}
+.pelota__caras:nth-child(7) {
+  transform: rotateY(280deg);
+}
+
+.pelota__caras:nth-child(8) {
+  transform: rotateY(320deg);
+}
+
+.pelota__caras:nth-child(9) {
+  transform: rotateY(360deg);
+}
+
+@keyframes vueltas {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
