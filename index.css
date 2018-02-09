@@ -1,65 +1,143 @@
 body {
-  background: black;
+    background-color: rgb(22, 22, 22);
 }
+
+.cubo {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    animation: rotar 10s infinite linear;
+    transform-style: preserve-3d;
+    left: calc(50vw - 75px);
+    top: calc(50vh - 75px);
+}
+
+.cubo__cara {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    line-height: 150px;
+    text-align: center;
+    color: black;
+}
+
+.cubo__cara:nth-child(1) {
+    background-color: rgba(0, 0, 255, 0.426);
+    transform: translateZ(75px);
+}
+
+.cubo__cara:nth-child(2) {
+    background-color: rgba(255, 0, 0, 0.371);
+    transform: rotateY(90deg);
+    left: -75px;
+}
+
+.cubo__cara:nth-child(3) {
+    background-color: rgba(255, 99, 71, 0.467);
+    transform: rotateX(90deg);
+    top: 75px;
+}
+
+.cubo__cara:nth-child(4) {
+    background-color: rgba(255, 255, 0, 0.364);
+    transform: rotateX(90deg);
+    top: -75px;
+}
+
+.cubo__cara:nth-child(5) {
+    background-color: rgba(0, 255, 0, 0.35);
+    transform: rotateY(90deg);
+    left: 75px;
+}
+
+.cubo__cara:nth-child(6) {
+    background-color: rgba(165, 42, 42, 0.57);
+    transform: rotateY(90deg);
+    transform: translateZ(-75px);
+}
+
+@keyframes rotar {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg)
+    }
+}
+
+/* -----------------pelota------------------*/
+
 h1 {
-  color: azure;
-  margin-top: 60px;
-  font-size: 46px;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+    color: azure;
+    margin-top: 60px;
+    font-size: 26px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
 .pelota {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  animation: vueltas 10s infinite linear;
-  transform-style: preserve-3d;
-  position: absolute;
-  top: calc(50vh - 150px);
-  left: calc(50vw - 150px);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    animation: vueltas 10s infinite linear;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 75px);
 }
+
 .pelota__caras {
-  border: 1px solid red;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  position: absolute;
+    border: 2px solid red;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
 }
+
 .pelota__caras:nth-child(1) {
-  transform: rotateY(40deg);
+    transform: rotateY(40deg);
 }
+
 .pelota__caras:nth-child(2) {
-  transform: rotateY(80deg);
+    transform: rotateY(80deg);
 }
+
 .pelota__caras:nth-child(3) {
-  transform: rotateY(120deg);
+    transform: rotateY(120deg);
 }
+
 .pelota__caras:nth-child(4) {
-  transform: rotateY(160deg);
+    transform: rotateY(160deg);
 }
+
 .pelota__caras:nth-child(5) {
-  transform: rotateY(200deg);
+    transform: rotateY(200deg);
 }
+
 .pelota__caras:nth-child(6) {
-  transform: rotateY(240deg);
+    transform: rotateY(240deg);
 }
+
 .pelota__caras:nth-child(7) {
-  transform: rotateY(280deg);
+    transform: rotateY(280deg);
 }
 
 .pelota__caras:nth-child(8) {
-  transform: rotateY(320deg);
+    transform: rotateY(320deg);
 }
 
 .pelota__caras:nth-child(9) {
-  transform: rotateY(360deg);
+    transform: rotateY(360deg);
 }
 
 @keyframes vueltas {
-  from {
-    transform: rotateY(0deg);
-  }
-  to {
-    transform: rotateY(360deg);
-  }
+    0% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg)
+    }
 }
